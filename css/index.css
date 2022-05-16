@@ -291,6 +291,7 @@ header>#btn>span{
 }
 #show{
   /* width:auto; */
+  overflow: hidden;
 }
 #all{
   /* width:auto; */

@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/index_media.css">
-  <!-- <link rel="stylesheet" href="./js/index.js"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="./css/index_px.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <script src="./js/index.js"></script>
 </head>
 <body>
   <div id="wrap">
@@ -144,28 +145,33 @@
                 </figure>
                 <figure>
                   <img src="./images/pic02.png" alt="작품2">
-                  <figcaption>work01</figcaption>
+                  <figcaption>work02</figcaption>
                 </figure>
                 <figure>
                   <img src="./images/pic03.png" alt="작품3">
-                  <figcaption>work01</figcaption>
+                  <figcaption>work03</figcaption>
                 </figure>
                 <figure>
                   <img src="./images/pic04.png" alt="작품4">
-                  <figcaption>work01</figcaption>
+                  <figcaption>work04</figcaption>
                 </figure>
                 <figure>
                   <img src="./images/pic01.png" alt="작품1">
-                  <figcaption>work01</figcaption>
+                  <figcaption>work05</figcaption>
                 </figure>
                 <figure>
                   <img src="./images/pic02.png" alt="작품2">
-                  <figcaption>work01</figcaption>
+                  <figcaption>work06</figcaption>
                 </figure>
               </div><!-- all -->
             </div> <!-- show -->
-            <p class="prev">prev</p>
-            <p class="next">next</p>
+            <p class="prev"><span class="material-icons">
+              arrow_back_ios
+              </span>
+              </p>
+            <p class="next"><span class="material-icons">
+              arrow_forward_ios
+              </span></p>
           </div><!--  gallery  -->
       </div>
     </article>
@@ -225,7 +231,7 @@
       <h4 class="hide">서브내용</h4>
       <ul class="sument">
         <li><a href="#wrap">home</a></li>
-        <li><a href="#box02">슬로건</a></li>
+        <li><a href="#box02">SLOGUN</a></li>
         <li><a href="#box03">My Storgy</a></li>
         <li><a href="#box04">My Skill</a></li>
         <li><a href="#box05">My Work</a></li>
@@ -242,7 +248,7 @@
       </small>
     </footer>
   </div>
-  <script>
+  <!-- <script>
     $(function(){
       // 현재 브라우저 사이즈 가져오는 작업
       let windowW = $(window).width();
@@ -251,12 +257,16 @@
       {}
       else if(windowW < 1320 && windowW >= 980){
         nav();
+        subMenu();
+        topScroll();
       }
       else if(windowW < 980 && windowW >= 580){
-
+        nav();
+        subMenu();
+        topScroll();
       }
       else if(windowW < 580){
-
+        mobileNav();
       }
 
       // nav
@@ -272,6 +282,16 @@
           return false;
         });
       };
+
+
+    function subMenu(){
+        $('aside ul>li>a').on('click'function(e){
+            let navHref = $(this).attr('href');
+            let aPos = $(navHref).offset().top;
+            console.log(aPos);
+            $('html,body').animate({scrollTop:aPos},800);
+        });
+    }
 
       function topScroll(){
         $('aside .top').on('click',function(e){
@@ -301,6 +321,6 @@
         })
       }
     })
-  </script>
+  </script> -->
 </body>
 </html>

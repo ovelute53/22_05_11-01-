@@ -403,7 +403,7 @@
     }
     
     #box05>div>p.title{
-      width: ;
+      /* width: ; */
       margin-bottom: 30px;
     }
     #box05>div>p.text{
@@ -420,12 +420,13 @@
 
     #box05 .gallery{
       /* width:auto; */
-      position:static;
-      overflow: hidden;
+      /* position:static; */
+      /* overflow: hidden; */
     }
     #show{
       width:85vw;
       margin: 0 auto;
+      overflow: hidden; 
     }
     #all{
       width: 255vw;
